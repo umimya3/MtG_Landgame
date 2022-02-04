@@ -32,6 +32,46 @@ class Deck:
         #配列の要素数のマックス
         #print(len(self.deck)-1)
 
+        
+class Player:
+
+    hand=[]
+    GY=[]
+    BF=[]
+    Exile=[]
+    life=20
+    name=""
+    
+    def __init__(self,name):
+    #変数初期化
+        self.name=name
+        #手札・墓地・戦場・除外
+        """
+        hand=[]
+        GY=[]
+        BF=[]
+        Exile=[]
+        Life=20
+        """
+        #name=""
+        pass
+        
+    def show_name(self):
+        print(f"myname is {self.name}")
+    
+    def hand_add(self,card):
+        self.hand=(self.hand).append(card)
+        
+        #gain or loss
+    def life_loss(self,dmg):
+        self.life = self.life-(dmg)
+        print(f"Life is  {self.life}")
+        
+    def life_gain(self,dmg):
+        self.life = self.life+(dmg)
+        print(f"Life is  {self.life}")        
+        
+        
 ########################################
 #main
 
